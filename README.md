@@ -1,4 +1,3 @@
-tk
-==
+# tk
 
-Typekit CLI
+> Typekit CLI
