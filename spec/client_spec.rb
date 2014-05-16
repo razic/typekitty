@@ -28,7 +28,7 @@ describe "Typekitty::Client" do
                     to_return(:status => 200, :body => kits_json)
             end
 
-            it 'should get the kits' do
+            it 'should get the kits by `id`' do
                 kits = client.kits
                 expect(kits).to include 'foo'
                 expect(kits).to include 'bar'
