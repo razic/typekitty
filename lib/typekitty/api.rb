@@ -6,10 +6,11 @@ module Typekitty
 
         attr_accessor :api_token
 
-        base_uri 'typekit.com/api/v1/json'
+        base_uri 'https://typekit.com/api/v1/json'
+        format :json
 
         def initialize api_token
-            @api_token = api_token
+            self.class.default_params :token => api_token
         end
     end
 end
