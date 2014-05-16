@@ -10,7 +10,7 @@ module Typekitty
 
         # Lists kits by their `id`
         def self.kits
-            [*get('/kits')['kits']].map { |kits| kits['id'] }
+            [*get('/kits')['kits']].map { |kit| kit['id'] }
         end
     end
 end
