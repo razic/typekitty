@@ -1,6 +1,6 @@
 require 'thor'
 
-module Typekit
+module Typekitty
     class CLI < Thor
     end
 end
