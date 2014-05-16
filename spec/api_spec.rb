@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Typekitty::Client" do
+describe "Typekitty::API" do
     let :api_url do
         'https://typekit.com/api/v1/json'
     end
@@ -9,8 +9,12 @@ describe "Typekitty::Client" do
         'foobar'
     end
 
-    let :client do
-        Typekitty::Client.new api_token
+    let :api do
+        Typekitty::API
+    end
+
+    before :each do
+        api.default_params :token => api_token
     end
 
     describe '#kits' do
@@ -28,8 +32,8 @@ describe "Typekitty::Client" do
                     to_return(:status => 200, :body => kits_json)
             end
 
-            it 'should get the kits by `id`' do
-                kits = client.kits
+            it 'should get the kits' do
+                kits = api.kits
                 expect(kits).to include 'foo'
                 expect(kits).to include 'bar'
             end
@@ -41,7 +45,7 @@ describe "Typekitty::Client" do
             end
 
             it 'should return an empty array' do
-                expect(client.kits).to be_empty
+                expect(api.kits).to be_empty
             end
         end
     end
