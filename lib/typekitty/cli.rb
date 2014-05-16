@@ -1,5 +1,5 @@
 require 'thor'
-require 'typekitty/client'
+require 'typekitty/api'
 
 module Typekitty
     class CLI < Thor
@@ -7,13 +7,7 @@ module Typekitty
 
         desc 'kits', 'Lists your kits by their `id`'
         def kits
-            puts client.kits
-        end
-
-        no_commands do
-            def client
-                @client ||= Typekitty::Client.new options[:token]
-            end
+            puts ::Typekitty::API.kits
         end
     end
 end

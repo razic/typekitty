@@ -1,16 +1,16 @@
 require 'httparty'
 
 module Typekitty
-    class API
-        include HTTParty
+    module API
+        include ::HTTParty
 
-        attr_accessor :api_token
-
-        base_uri 'https://typekit.com/api/v1/json'
         format :json
+        base_uri 'https://typekit.com/api/v1/json'
+        default_params :token => ENV['TYPEKIT_TOKEN']
 
-        def initialize api_token
-            self.class.default_params :token => api_token
+        # Lists kits by their `id`
+        def self.kits
+            [*get('/kits')['kits']].map { |kits| kits['id'] }
         end
     end
 end

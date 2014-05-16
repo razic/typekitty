@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
     s.files       = [
         "lib/typekitty.rb",
         "lib/typekitty/cli.rb"
-        "lib/typekitty/client.rb"
-        "lib/typekitty/kit.rb"
+        "lib/typekitty/api.rb"
     ]
     s.homepage    = 'https://github.com/razic/typekitty'
     s.license     = 'MIT'

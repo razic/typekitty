@@ -23,24 +23,20 @@ section.
 require 'typekitty'
 ```
 
-#### Initialize the API Client
+#### The `ENV['TYPEKIT_TOKEN']` Environment Variable
 
-Before you can access the API, you need to new up a `Typekitty::Client`
-instance:
+The `ENV['TYPEKIT_TOKEN']` variable represents a Typekit API Token, which you
+may obtain on the [tokens] page.
 
-```ruby
-@typekitty = Typekitty::Client.new ENV['TYPEKIT_TOKEN']
-```
-
-The `ENV['TYPEKIT_TOKEN']` represents a Typekit API Token, which you may obtain
-on the [tokens] page.
+The variable is used to authenticate requests.  It must be set in order for
+your requests to authenticate properly.
 
 #### Kits
 
 ##### Listing your Kits
 
 ```ruby
-@typekitty.kits
+Typekitty::API.kits
 => ['ay12s3']
 ```
 
@@ -49,7 +45,7 @@ on the [tokens] page.
 The `typekitty` gem includes a command-line interface for accessing the [Typekit]
 API.
 
-To see what it can do:
+For usage and help:
 
 ```sh
 $ typekitty --help
