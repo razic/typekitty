@@ -1,5 +1,4 @@
-require 'rspec'
-require 'typekitty'
+require 'spec_helper'
 
 describe "Typekitty::API" do
     let :api_token do
@@ -12,11 +11,5 @@ describe "Typekitty::API" do
 
     it 'should include HTTParty' do
         expect(Typekitty::API).to include(HTTParty)
-    end
-
-    describe '#api_token' do
-        it 'should have an api token' do
-            expect(api.api_token).to equal(api_token)
-        end
     end
 end
