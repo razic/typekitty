@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
     s.email       = 'razic@viralkitty.com'
     s.files       = [
         "lib/typekitty.rb",
-        "lib/typekitty/cli.rb"
+        "lib/typekitty/cli.rb",
         "lib/typekitty/api.rb"
     ]
     s.homepage    = 'https://github.com/razic/typekitty'
@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
     s.add_development_dependency 'rspec', '2.14.1'
     s.add_development_dependency 'rake', '10.1.0'
     s.add_development_dependency 'webmock', '1.18.0'
-    spec.executables << 'typekitty'
+    s.executables << 'typekitty'
 end
