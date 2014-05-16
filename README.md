@@ -11,3 +11,7 @@ $ [sudo] gem install typekit-cli
 ```
 
 [Typekit]: http://typekit.com
+
+## License
+
+MIT
