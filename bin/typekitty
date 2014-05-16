@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
-require File.join(File.expand_path(File.dirname(__FILE__)), '../lib/typekitty')
+# Add the lib to the load path
+$:.unshift File.dirname(__FILE__) + '/../lib'
 
+# Require the CLI
+require 'typekitty'
+
+# Start the CLI
 Typekitty::CLI.start ARGV
