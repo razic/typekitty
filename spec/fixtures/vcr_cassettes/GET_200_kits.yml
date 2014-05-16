@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://typekit.com/api/v1/json/kits?token=b7657b3f0a75e429dd5c8b6c15c5e8514548681d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 16 May 2014 23:21:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - e73c39e949a922e432dc45a056455e73
+      Remote-User:
+      - '1255199'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"8cc051fddc330de6a451dec4552bebf4"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - tk_session_production=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTg2MDk4YjBiNDU3M2E0ZTBmMjFkYzY3NzZhM2U4MWZlBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW5IeWVxRktUMjRhTTFZblRoUjY5eEJNS2lwdmdwaUNOQTluOTU4RGhneHM9BjsARg%3D%3D--30175ca2ae3cca005e9ef48fe7d389d8b8284f72;
+        domain=typekit.com; path=/; expires=Fri, 30-May-2014 23:21:49 GMT; HttpOnly
+      X-Runtime:
+      - '0.012496'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"kits":[{"id":"ayh2hmf","link":"/api/v1/json/kits/ayh2hmf"}]}'
+    http_version: 
+  recorded_at: Fri, 16 May 2014 23:21:49 GMT
+recorded_with: VCR 2.9.0
