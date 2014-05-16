@@ -1,3 +1,4 @@
 require 'rspec'
-require 'typekitty'
 require 'webmock/rspec'
+
+require_relative '../lib/typekitty'
