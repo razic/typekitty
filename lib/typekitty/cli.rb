@@ -12,8 +12,8 @@ module Typekitty
 
         no_commands do
             def api
-                ::Typekitty::API.default_params :token => options[:token]
-                ::Typekitty::API
+                Typekitty::API.default_params :token => options[:token]
+                Typekitty::API
             end
         end
     end
