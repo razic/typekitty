@@ -7,7 +7,14 @@ module Typekitty
 
         desc 'kits', 'Lists your kits by their `id`'
         def kits
-            puts ::Typekitty::API.kits
+            puts api.kits
+        end
+
+        no_commands do
+            def api
+                ::Typekitty::API.default_params :token => options[:token]
+                ::Typekitty::API
+            end
         end
     end
 end
