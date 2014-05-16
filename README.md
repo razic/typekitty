@@ -54,11 +54,27 @@ To see what it can do:
 $ typekitty --help
 ```
 
+## Development
+
+### Install the Dependencies
+
+Use [Bundler] to install the dependencies:
+
+```sh
+$ bundle install
+```
+
+### Running the Tests
+
+```sh
+$ rspec spec
+```
+
 ## License
 
 MIT
 
 [Typekit]: http://typekit.com
 [CLI]: #cli
-[bundler]: http://bundler.io
+[Bundler]: http://bundler.io
 [tokens]: https://typekit.com/account/tokens
