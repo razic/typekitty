@@ -2,9 +2,9 @@ require 'typekitty/api'
 
 module Typekitty
     class Client < API
-        # Lists your kits
+        # Lists kits by their `id`
         def kits
-            self.class.get('/kits')['kits'].map { |kits| kits['id'] }
+            [*self.class.get('/kits')['kits']].map { |kits| kits['id'] }
         end
     end
 end
