@@ -17,6 +17,8 @@ section.
 
 ### Ruby
 
+The API requires Ruby 1.9.3 or greater.
+
 #### Require the Gem
 
 ```ruby
