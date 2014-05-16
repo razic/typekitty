@@ -48,7 +48,7 @@ API.
 For usage and help:
 
 ```sh
-$ typekitty --help
+$ typekitty help
 ```
 
 ## Development
