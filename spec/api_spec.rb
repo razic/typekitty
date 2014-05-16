@@ -1,4 +1,4 @@
-require './spec_helper'
+require File.expand_path('..', __FILE__) + '/spec_helper'
 
 describe "Typekitty::API" do
     let :api_url do
