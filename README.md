@@ -1,4 +1,4 @@
-# typekitty
+# typekitty ![](https://travis-ci.org/razic/typekitty.svg?branch=dev)
 
 > Ruby client for the Adobe [Typekit] API
 
