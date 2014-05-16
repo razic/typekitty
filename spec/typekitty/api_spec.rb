@@ -5,8 +5,12 @@ describe "Typekitty::API" do
         Typekitty::API
     end
 
+    let :api_token do
+        'b7657b3f0a75e429dd5c8b6c15c5e8514548681d'
+    end
+
     before :each do
-        api.default_params :token => 'b7657b3f0a75e429dd5c8b6c15c5e8514548681d'
+        api.default_params :token => api_token
     end
 
     describe '#kits' do
@@ -19,7 +23,11 @@ describe "Typekitty::API" do
         end
 
         describe '401 Unauthorized' do
-            xit 'should return an empty array' do
+            let :api_token do
+                'invalid_api_token'
+            end
+
+            it 'should return an empty array' do
                 VCR.use_cassette 'GET_401_kits' do
                     expect(api.kits).to be_empty
                 end
