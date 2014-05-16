@@ -18,5 +18,7 @@ Gem::Specification.new do |s|
     s.add_runtime_dependency 'thor', '0.19.1'
     s.add_runtime_dependency 'httparty', '0.13.1'
     s.add_development_dependency 'rspec', '2.14.1'
+    s.add_development_dependency 'vcr', '2.9.0'
+    s.add_development_dependency 'webmock', '1.18.0'
     spec.executables << 'typekitty'
 end
