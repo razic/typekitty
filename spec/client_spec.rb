@@ -22,15 +22,27 @@ describe "Typekitty::Client" do
             '{"kits":[{"id":"foo","link":"bar"}, {"id":"bar", "link":"foo"}]}'
         end
 
-        before :each do
-            stub_request(:get, kits_url).
-                to_return(:status => 200, :body => kits_json)
+        describe '200 OK' do
+            before :each do
+                stub_request(:get, kits_url).
+                    to_return(:status => 200, :body => kits_json)
+            end
+
+            it 'should get the kits' do
+                kits = client.kits
+                expect(kits).to include 'foo'
+                expect(kits).to include 'bar'
+            end
         end
 
-        it 'should get the kits' do
-            kits = client.kits
-            expect(kits).to include 'foo'
-            expect(kits).to include 'bar'
+        describe '401 Unauthorized' do
+            before :each do
+                stub_request(:get, kits_url).to_return(:status => 401)
+            end
+
+            it 'should return an empty array' do
+                expect(client.kits).to be_empty
+            end
         end
     end
 end
