@@ -12,7 +12,7 @@ describe "Typekitty::Kit" do
 
     describe "#name" do
         it "should have a name" do
-            expect(kit.name).to be
+            expect(kit.name).to equal(kit_name)
         end
     end
 end
