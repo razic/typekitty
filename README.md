@@ -30,7 +30,7 @@ API.
 
 To see what it can do:
 
-```
+```sh
 $ typekitty --help
 ```
 
