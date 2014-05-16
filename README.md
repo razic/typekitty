@@ -31,7 +31,7 @@ API.
 To see what it can do:
 
 ```
-typekitty --help
+$ typekitty --help
 ```
 
 ## License
