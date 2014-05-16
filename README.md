@@ -41,6 +41,7 @@ on the [tokens] page.
 
 ```ruby
 @typekitty.kits
+=> ['ay12s3']
 ```
 
 ### CLI
