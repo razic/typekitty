@@ -1,8 +1,6 @@
 # typekit-cli
 
-> [Typekit] CLI
-
-A command-line interface to the [Typekit] API.
+> A command-line interface to the [Typekit] API.
 
 ## Installation
 
