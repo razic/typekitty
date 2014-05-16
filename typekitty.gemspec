@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-    s.name        = 'typekit'
+    s.name        = 'typekitty'
     s.bindir      = 'bin'
     s.version     = '0.1.0'
     s.date        = '2014-05-15'
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
     s.homepage    = 'https://github.com/razic/typekitty'
     s.license     = 'MIT'
     s.add_runtime_dependency 'thor', '0.19.1'
+    s.add_runtime_dependency 'httparty', '0.13.1'
     s.add_development_dependency 'rspec', '2.14.1'
     spec.executables << 'typekitty'
 end
