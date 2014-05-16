@@ -1,11 +1,11 @@
-# typekit-cli
+# typekit
 
-> A command-line interface to the [Typekit] API.
+> Ruby client for the Adobe Typekit API
 
 ## Installation
 
 ```sh
-$ [sudo] gem install typekit-cli
+$ [sudo] gem install typekit
 ```
 
 [Typekit]: http://typekit.com
