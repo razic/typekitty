@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-$ [sudo] gem install typekitty
+$ gem install typekitty
 ```
 
 ## Usage
