@@ -25,13 +25,19 @@ The API requires Ruby 1.9.3 or greater.
 require 'typekitty'
 ```
 
-#### The `ENV['TYPEKIT_TOKEN']` Environment Variable
+#### Authenticating Requests
 
 The `ENV['TYPEKIT_TOKEN']` variable represents a Typekit API Token, which you
 may obtain on the [tokens] page.
 
 The variable is used to authenticate requests.  It must be set in order for
 your requests to authenticate properly.
+
+An example could be:
+
+```ruby
+ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
+```
 
 #### Kits
 
