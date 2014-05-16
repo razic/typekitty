@@ -23,6 +23,26 @@ section.
 require 'typekitty'
 ```
 
+#### Initialize the API Client
+
+Before you can access the API, you need to new up a `Typekitty::Client`
+instance:
+
+```ruby
+@typekitty = Typekitty::Client.new ENV['TYPEKIT_TOKEN']
+```
+
+The `ENV['TYPEKIT_TOKEN']` represents a Typekit API Token, which you may obtain
+on the [tokens] page.
+
+#### Kits
+
+##### Listing your Kits
+
+```ruby
+@typekitty.kits
+```
+
 ### CLI
 
 The `typekitty` gem includes a command-line interface for accessing the [Typekit]
@@ -41,3 +61,4 @@ MIT
 [Typekit]: http://typekit.com
 [CLI]: #cli
 [bundler]: http://bundler.io
+[tokens]: https://typekit.com/account/tokens
