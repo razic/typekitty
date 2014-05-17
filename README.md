@@ -19,6 +19,11 @@ section.
 
 The API requires Ruby 1.9.3 or greater.
 
+#### Common Tasks
+
+* [Listing Your Kits]
+* [Getting Information About The Draft Version of a Kit]
+
 #### Require the Gem
 
 ```ruby
@@ -41,11 +46,18 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 
 #### Kits
 
-##### Listing your Kits
+##### Listing Your Kits
 
 ```ruby
-Typekitty::API.kits
+Typekitty:Kit.all
 => ['ay12s3']
+```
+
+##### Getting Information About The Draft Version of a Kit
+
+```ruby
+Typekitty::Kit.find 'ay12s3'
+=> <Typekit::Kit @id='ay12s3'>
 ```
 
 ### CLI
@@ -83,3 +95,5 @@ MIT
 [CLI]: #cli
 [Bundler]: http://bundler.io
 [tokens]: https://typekit.com/account/tokens
+[Listing Your Kits]: #listing-your-kits
+[Getting Information About the Draft Version of a Kit]
