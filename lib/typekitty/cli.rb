@@ -12,7 +12,6 @@ module Typekitty
         desc 'kit KIT_ID', 'Get information about a kit'
         option :token, :required => true
         def kit id
-            p id
             puts api.kit id
         end
 
