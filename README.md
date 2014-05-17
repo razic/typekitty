@@ -49,8 +49,8 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 ##### Listing Your Kits
 
 ```ruby
-Typekitty:Kit.all
-=> [<Typekitty::Kit @id='ay12s3'>]
+Typekitty::Kit.all
+=> [#<Typekitty::Kit id="gec4ttz" link="/api/v1/json/kits/gec4ttz">]
 ```
 
 ##### Getting Information About The Draft Version of a Kit
