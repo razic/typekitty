@@ -56,7 +56,11 @@ API.
 For usage and help:
 
 ```sh
-$ typekitty help
+$ typekitty
+Commands:
+typekitty help [COMMAND]            # Describe available commands or one specific command
+typekitty kit KIT_ID --token=TOKEN  # Get information about a kit
+typekitty kits --token=TOKEN        # Lists your kits
 ```
 
 ## Development
