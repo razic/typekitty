@@ -1,5 +1,4 @@
 require 'httparty'
-require 'typekitty/kit'
 
 module Typekitty
     module API
@@ -20,7 +19,7 @@ module Typekitty
         def self.kit id
             response = handle_response get "/kits/#{id}"
 
-            Typekitty::Kit.new response['kit']
+            response['kit']
         end
 
         def self.handle_response response

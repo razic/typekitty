@@ -18,26 +18,36 @@ describe "Typekitty::API" do
     end
 
     describe '.kits' do
-        before :each do
-            VCR.use_cassette 'get_all_kits' do
-                @kits = api.kits
+        describe 'when the user has kits' do
+            before :each do
+                VCR.use_cassette 'get_all_kits' do
+                    @kits = api.kits
+                end
             end
-        end
 
-        it 'should return an array of kits' do
-            expect(@kits.first).to be_a Typekitty::Kit
+            it 'should return an array' do
+                expect(@kits).to be_an Array
+            end
+
+            it 'the array should contain a kit' do
+                expect(@kits).to_not be_empty
+            end
         end
     end
 
     describe '.kit' do
-        before :each do
-            VCR.use_cassette 'GET_200_kit' do
-                @kit = api.kit 'gec4ttz'
-            end
-        end
+        describe 'when there is a kit matching the id' do
+            let(:kit_id) { 'gec4ttz' }
 
-        it 'should return a kit' do
-            expect(@kit).to be_a Typekitty::Kit
+            before :each do
+                VCR.use_cassette 'GET_200_kit' do
+                    @kit = api.kit kit_id
+                end
+            end
+
+            it 'should return the kit' do
+                expect(@kit['id']).to eq kit_id
+            end
         end
     end
 
