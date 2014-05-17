@@ -2,7 +2,7 @@ require 'httparty'
 
 module Typekitty
     module API
-        include ::HTTParty
+        include HTTParty
 
         format :json
         base_uri 'https://typekit.com/api/v1/json'
