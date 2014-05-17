@@ -19,7 +19,7 @@ describe "Typekitty::API" do
 
     describe '.kits' do
         before :each do
-            VCR.use_cassette 'GET_200_kits' do
+            VCR.use_cassette 'get_all_kits' do
                 @kits = api.kits
             end
         end

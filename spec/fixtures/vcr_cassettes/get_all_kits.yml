@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://typekit.com/api/v1/json/kits?token=b7657b3f0a75e429dd5c8b6c15c5e8514548681d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 May 2014 05:15:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 33bbf0d733081d8bc3b6435bdd2ef6b8
+      Remote-User:
+      - '1255199'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"2074afaffb5a1f8ad0d982b9915fa443"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - tk_session_production=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTU3NDQzODg5ZmJkNzJmNGIzODg0M2E3NzA1MzNkMTE4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWhPK2VzZTAvY1JoelBmM2xIdzVTanFLZGhzN2dyL25aQjE1VCs0aGc3Nk09BjsARg%3D%3D--310479fcadd14f305bd5ebac5e8f6f05ff7bc6e1;
+        domain=typekit.com; path=/; expires=Sat, 31-May-2014 05:15:21 GMT; HttpOnly
+      X-Runtime:
+      - '0.012321'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"kits":[{"id":"gec4ttz","link":"/api/v1/json/kits/gec4ttz"}]}'
+    http_version: 
+  recorded_at: Sat, 17 May 2014 05:15:20 GMT
+- request:
+    method: get
+    uri: https://typekit.com/api/v1/json/kits/gec4ttz?token=b7657b3f0a75e429dd5c8b6c15c5e8514548681d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 May 2014 05:15:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Content-Length:
+      - '287'
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 3fa569ee34268aff6c9a5cac67ea6492
+      Remote-User:
+      - '1255199'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"518ae2a3f4013fec48aee3050ab745e5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - tk_session_production=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTUwMjI2MTAzZjU1MWE4ZmU0YmNlODBiMGIzZTQwNGViBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXdWK0VKRHgrdU82L2puTFpSd3FxTDkvang5d3RNeHVKY282VTc4cWhpZU09BjsARg%3D%3D--faf5a605e030e642703817ed4214f521e85f13da;
+        domain=typekit.com; path=/; expires=Sat, 31-May-2014 05:15:22 GMT; HttpOnly
+      X-Runtime:
+      - '0.044097'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"kit":{"id":"gec4ttz","name":"viralkitty","analytics":false,"badge":true,"domains":["viralkitty.com"],"families":[{"id":"llxb","name":"Museo
+        Slab","slug":"museo-slab","css_names":["museo-slab"],"css_stack":"\"museo-slab\",serif","subset":"default","variations":["n3","i3","n7","i7"]}]}}'
+    http_version: 
+  recorded_at: Sat, 17 May 2014 05:15:22 GMT
+recorded_with: VCR 2.9.0
