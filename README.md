@@ -91,6 +91,10 @@ $ bundle install
 $ rspec spec
 ```
 
+### Versioning
+
+We use [Semantic Versioning]; please read before cutting new releases.
+
 ## License
 
 MIT
@@ -101,3 +105,4 @@ MIT
 [tokens]: https://typekit.com/account/tokens
 [Listing Your Kits]: #listing-your-kits
 [Getting Information About the Draft Version of a Kit]: #getting-information-about-the-draft-version-of-a-kit
+[Semantic Versioning]: http://semver.org
