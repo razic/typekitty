@@ -22,7 +22,7 @@ The API requires Ruby 1.9.3 or greater.
 #### Common Tasks
 
 * [Listing Your Kits]
-* [Getting Information About The Draft Version of a Kit]
+* [Getting Information About the Draft Version of a Kit]
 
 #### Require the Gem
 
