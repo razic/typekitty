@@ -13,24 +13,41 @@ describe "Typekitty::API" do
         api.default_params :token => api_token
     end
 
-    describe '#kits' do
-        describe 'GET 200' do
-            it 'return kits by their `id` in an array' do
-                VCR.use_cassette 'GET_200_kits' do
-                    expect(api.kits).to include 'ayh2hmf'
-                end
+    it 'should include HTTParty' do
+        expect(Typekitty::API).to include HTTParty
+    end
+
+    describe '.kits' do
+        before :each do
+            VCR.use_cassette 'GET_200_kits' do
+                @kits = api.kits
             end
         end
 
-        describe '401 Unauthorized' do
-            let :api_token do
-                'invalid_api_token'
+        it 'should return an array of kits by `id`' do
+            expect(@kits.first).to eq 'ayh2hmf'
+        end
+    end
+
+    describe '.handle_response' do
+        describe 'when response code is 200' do
+            let :response do
+                double "response", :code => 200
             end
 
-            it 'should return an empty array' do
-                VCR.use_cassette 'GET_401_kits' do
-                    expect(api.kits).to be_empty
-                end
+            it 'should return the response' do
+                expect(api.handle_response response).to be response
+            end
+        end
+
+        describe 'when response code is 401' do
+            let :response do
+                double "response", :code => 401
+            end
+
+            it 'should raise an unauthorized error' do
+                expect { api.handle_response response }.to \
+                    raise_error Typekitty::API::UnauthorizedError
             end
         end
     end

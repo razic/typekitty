@@ -8,9 +8,21 @@ module Typekitty
         base_uri 'https://typekit.com/api/v1/json'
         default_params :token => ENV['TYPEKIT_TOKEN']
 
-        # Lists kits by their `id`
         def self.kits
-            [*get('/kits')['kits']].map { |kit| kit['id'] }
+            response = handle_response get '/kits'
+
+            response['kits'].inject([]) do |kits, kit|
+                kits << kit['id']
+            end
         end
+
+        def self.handle_response response
+            case response.code
+            when 200 then response
+            when 401 then raise UnauthorizedError
+            end
+        end
+
+        class UnauthorizedError < StandardError; end
     end
 end
