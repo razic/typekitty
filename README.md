@@ -96,4 +96,4 @@ MIT
 [Bundler]: http://bundler.io
 [tokens]: https://typekit.com/account/tokens
 [Listing Your Kits]: #listing-your-kits
-[Getting Information About the Draft Version of a Kit]
+[Getting Information About the Draft Version of a Kit]: #getting-information-about-the-draft-version-of-a-kit
