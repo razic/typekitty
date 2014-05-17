@@ -1,3 +1,4 @@
+require 'pp'
 require 'thor'
 require 'typekitty/api'
 
@@ -6,13 +7,13 @@ module Typekitty
         desc 'kits', 'Lists your kits'
         option :token, :required => true
         def kits
-            puts api.kits
+            pp api.kits
         end
 
         desc 'kit KIT_ID', 'Get information about a kit'
         option :token, :required => true
         def kit id
-            puts api.kit id
+            pp api.kit id
         end
 
         no_commands do
