@@ -13,7 +13,7 @@ module Typekitty
             response = handle_response get '/kits'
 
             response['kits'].inject([]) do |kits, kit|
-                kits << Typekitty::Kit.new(kit)
+                kits << self.kit(kit['id'])
             end
         end
 
