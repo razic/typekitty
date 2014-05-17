@@ -19,6 +19,11 @@ section.
 
 The API requires Ruby 1.9.3 or greater.
 
+#### Common Tasks
+
+* [Listing Your Kits]
+* [Getting Information About the Draft Version of a Kit]
+
 #### Require the Gem
 
 ```ruby
@@ -41,11 +46,18 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 
 #### Kits
 
-##### Listing your Kits
+##### Listing Your Kits
 
 ```ruby
-Typekitty::API.kits
-=> ['ay12s3']
+Typekitty::Kit.all
+=> [#<Typekitty::Kit analytics=false badge=true domains=["viralkitty.com"] families=[{"id"=>"llxb", "name"=>"Museo Slab", "slug"=>"museo-slab", "css_names"=>["museo-slab"], "css_stack"=>"\"museo-slab\",serif", "subset"=>"default", "variations"=>["n3", "i3", "n7", "i7"]}] id="gec4ttz" name="viralkitty">]
+```
+
+##### Getting Information About The Draft Version of a Kit
+
+```ruby
+Typekitty::Kit.find 'gec4ttz'
+=> #<Typekitty::Kit analytics=false badge=true domains=["viralkitty.com"] families=[{"id"=>"llxb", "name"=>"Museo Slab", "slug"=>"museo-slab", "css_names"=>["museo-slab"], "css_stack"=>"\"museo-slab\",serif", "subset"=>"default", "variations"=>["n3", "i3", "n7", "i7"]}] id="gec4ttz" name="viralkitty">
 ```
 
 ### CLI
@@ -83,3 +95,5 @@ MIT
 [CLI]: #cli
 [Bundler]: http://bundler.io
 [tokens]: https://typekit.com/account/tokens
+[Listing Your Kits]: #listing-your-kits
+[Getting Information About the Draft Version of a Kit]: #getting-information-about-the-draft-version-of-a-kit
