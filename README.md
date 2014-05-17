@@ -95,6 +95,12 @@ $ rspec spec
 
 We use [Semantic Versioning]; please read before cutting new releases.
 
+### Fixtures
+
+The specs use [VCR] cassettes to record and replay actual HTTP requests from
+the [Typekit] API. If you're unfamiliar with [VCR], then please read it's
+documentation before writing tests.
+
 ## License
 
 MIT
@@ -106,3 +112,4 @@ MIT
 [Listing Your Kits]: #listing-your-kits
 [Getting Information About the Draft Version of a Kit]: #getting-information-about-the-draft-version-of-a-kit
 [Semantic Versioning]: http://semver.org
+[VCR]: https://github.com/vcr/vcr
