@@ -16,6 +16,11 @@ module Typekitty
             pp api.kit id
         end
 
+        desc 'libraries', 'Lists font libraries'
+        def libraries
+            pp api.libraries
+        end
+
         no_commands do
             def api
                 Typekitty::API.default_params :token => options[:token]
