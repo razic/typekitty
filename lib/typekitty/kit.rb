@@ -5,11 +5,11 @@ module Typekitty
     class Kit < Hashie::Dash
         property :id, :required => true
         property :link
-        property :name
-        property :analytics
-        property :badge
-        property :domains
-        property :families
+        property :name, :required => true
+        property :analytics, :required => true
+        property :badge, :required => true
+        property :domains, :required => true
+        property :families, :required => true
 
         def self.all
             Typekitty::API.kits
