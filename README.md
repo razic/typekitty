@@ -50,7 +50,7 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 
 ```ruby
 Typekitty::Kit.all
-=> [#<Typekitty::Kit id="gec4ttz" link="/api/v1/json/kits/gec4ttz">]
+=> [#<Typekitty::Kit analytics=false badge=true domains=["viralkitty.com"] families=[{"id"=>"llxb", "name"=>"Museo Slab", "slug"=>"museo-slab", "css_names"=>["museo-slab"], "css_stack"=>"\"museo-slab\",serif", "subset"=>"default", "variations"=>["n3", "i3", "n7", "i7"]}] id="gec4ttz" name="viralkitty">]
 ```
 
 ##### Getting Information About The Draft Version of a Kit
