@@ -1,4 +1,5 @@
 require 'httparty'
+require 'typekitty/kit'
 
 module Typekitty
     module API
@@ -12,8 +13,14 @@ module Typekitty
             response = handle_response get '/kits'
 
             response['kits'].inject([]) do |kits, kit|
-                kits << kit['id']
+                kits << Typekitty::Kit.new(kit)
             end
+        end
+
+        def self.kit id
+            response = handle_response get "/kits/#{id}"
+
+            Typekitty::Kit.new response['kit']
         end
 
         def self.handle_response response

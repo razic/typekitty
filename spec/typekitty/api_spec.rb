@@ -24,8 +24,20 @@ describe "Typekitty::API" do
             end
         end
 
-        it 'should return an array of kits by `id`' do
-            expect(@kits.first).to eq 'ayh2hmf'
+        it 'should return an array of kits' do
+            expect(@kits.first).to be_a Typekitty::Kit
+        end
+    end
+
+    describe '.kit' do
+        before :each do
+            VCR.use_cassette 'GET_200_kit' do
+                @kit = api.kit 'gec4ttz'
+            end
+        end
+
+        it 'should return a kit' do
+            expect(@kit).to be_a Typekitty::Kit
         end
     end
 
