@@ -12,11 +12,11 @@ module Typekitty
         property :families, :required => true
 
         def self.all
-            Typekitty::API.kits
+            Typekitty::API.kits.inject([]) { |kits, kit| kits << new(kit) }
         end
 
         def self.find id
-            Typekitty::API.kit id
+            new Typekitty::API.kit id
         end
     end
 end
