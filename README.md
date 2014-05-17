@@ -50,7 +50,7 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 
 ```ruby
 Typekitty:Kit.all
-=> ['ay12s3']
+=> [<Typekit::Kit @id='ay12s3'>]
 ```
 
 ##### Getting Information About The Draft Version of a Kit
