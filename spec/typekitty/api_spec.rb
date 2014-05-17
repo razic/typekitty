@@ -67,15 +67,15 @@ describe "Typekitty::API" do
         end
 
         it 'should return the trial library in the array' do
-            expect(@libraries[0]['name']).to eq 'Trial Library'
+            expect(@libraries[0]['id']).to eq 'trial'
         end
 
         it 'should return the personal library in the array' do
-            expect(@libraries[1]['name']).to eq 'Personal Library'
+            expect(@libraries[1]['id']).to eq 'personal'
         end
 
         it 'should return the full library in the array' do
-            expect(@libraries[2]['name']).to eq 'Full Library'
+            expect(@libraries[2]['id']).to eq 'full'
         end
     end
 
