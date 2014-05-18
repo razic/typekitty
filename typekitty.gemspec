@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
     s.files       = [
         "lib/typekitty.rb",
         "lib/typekitty/cli.rb",
+        "lib/typekitty/library.rb",
         "lib/typekitty/kit.rb",
         "lib/typekitty/api.rb"
     ]

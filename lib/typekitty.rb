@@ -3,5 +3,6 @@ $:.unshift File.dirname(__FILE__)
 
 # Load the libraries
 require 'typekitty/api'
+require 'typekitty/library'
 require 'typekitty/kit'
 require 'typekitty/cli'

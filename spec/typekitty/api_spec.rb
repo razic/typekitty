@@ -51,6 +51,34 @@ describe "Typekitty::API" do
         end
     end
 
+    describe '.libraries' do
+        before :each do
+            VCR.use_cassette 'get_libraries' do
+                @libraries = api.libraries
+            end
+        end
+
+        it 'should return an array' do
+            expect(@libraries).to be_an Array
+        end
+
+        it 'should return 3 libraries in the array' do
+            expect(@libraries.count).to be 3
+        end
+
+        it 'should return the trial library in the array' do
+            expect(@libraries[0]['id']).to eq 'trial'
+        end
+
+        it 'should return the personal library in the array' do
+            expect(@libraries[1]['id']).to eq 'personal'
+        end
+
+        it 'should return the full library in the array' do
+            expect(@libraries[2]['id']).to eq 'full'
+        end
+    end
+
     describe '.handle_response' do
         describe 'when response code is 200' do
             let :response do

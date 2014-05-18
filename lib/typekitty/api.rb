@@ -22,6 +22,12 @@ module Typekitty
             response['kit']
         end
 
+        def self.libraries
+            response = handle_response get '/libraries'
+
+            response['libraries']
+        end
+
         def self.handle_response response
             case response.code
             when 200 then response
