@@ -109,8 +109,7 @@ We use [Semantic Versioning]; please read before cutting new releases.
 ### Fixtures
 
 The specs use [VCR] cassettes to record and replay actual HTTP requests from
-the [Typekit] API. If you're unfamiliar with [VCR], then please read it's
-documentation before writing tests.
+the [Typekit] API.
 
 ## License
 
