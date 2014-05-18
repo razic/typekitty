@@ -21,8 +21,9 @@ The API requires Ruby 1.9.3 or greater.
 
 #### Common Tasks
 
-* [Listing Your Kits]
+* [Listing Kits]
 * [Getting Information About the Draft Version of a Kit]
+* [Listing Font Libraries]
 
 #### Require the Gem
 
@@ -46,7 +47,7 @@ ENV['TYPEKIT_TOKEN'] = 'my_secret_token'
 
 #### Kits
 
-##### Listing Your Kits
+##### Listing Kits
 
 ```ruby
 Typekitty::Kit.all
@@ -60,6 +61,15 @@ Typekitty::Kit.find 'gec4ttz'
 => #<Typekitty::Kit analytics=false badge=true domains=["viralkitty.com"] families=[{"id"=>"llxb", "name"=>"Museo Slab", "slug"=>"museo-slab", "css_names"=>["museo-slab"], "css_stack"=>"\"museo-slab\",serif", "subset"=>"default", "variations"=>["n3", "i3", "n7", "i7"]}] id="gec4ttz" name="viralkitty">
 ```
 
+#### Libraries
+
+##### Listing Font Libraries
+
+```ruby
+Typekitty::Library.all
+=> [#<Typekitty::Library id="trial" link="/api/v1/json/libraries/trial" name="Trial Library">, #<Typekitty::Library id="personal" link="/api/v1/json/libraries/personal" name="Personal Library">, #<Typekitty::Library id="full" link="/api/v1/json/libraries/full" name="Full Library">]
+```
+
 ### CLI
 
 The `typekitty` gem includes a command-line interface for accessing the [Typekit]
@@ -70,9 +80,10 @@ For usage and help:
 ```sh
 $ typekitty
 Commands:
-typekitty help [COMMAND]            # Describe available commands or one specific command
-typekitty kit KIT_ID --token=TOKEN  # Get information about a kit
-typekitty kits --token=TOKEN        # Lists your kits
+  typekitty help [COMMAND]            # Describe available commands or one specific command
+  typekitty kit KIT_ID --token=TOKEN  # Get information about the draft version of a kit
+  typekitty kits --token=TOKEN        # Lists kits
+  typekitty libraries                 # Lists font libraries
 ```
 
 ## Development
@@ -109,7 +120,8 @@ MIT
 [CLI]: #cli
 [Bundler]: http://bundler.io
 [tokens]: https://typekit.com/account/tokens
-[Listing Your Kits]: #listing-your-kits
+[Listing Kits]: #listing-kits
+[Listing Font Libraries]: #listing-font-libraries
 [Getting Information About the Draft Version of a Kit]: #getting-information-about-the-draft-version-of-a-kit
 [Semantic Versioning]: http://semver.org
 [VCR]: https://github.com/vcr/vcr
